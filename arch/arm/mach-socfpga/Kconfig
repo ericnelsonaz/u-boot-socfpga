@@ -172,6 +172,10 @@ config TARGET_SOCFPGA_TERASIC_SOCKIT
 	bool "Terasic SoCkit (Cyclone V)"
 	select TARGET_SOCFPGA_CYCLONE5
 
+config TARGET_SOCFPGA_CL_MITYSOM_5CS
+	bool "Critical Link MitySOM_5CSx (Cyclone V)"
+	select TARGET_SOCFPGA_CYCLONE5
+
 endchoice
 
 config SYS_BOARD
@@ -190,6 +194,7 @@ config SYS_BOARD
 	default "sr1500" if TARGET_SOCFPGA_SR1500
 	default "stratix10-socdk" if TARGET_SOCFPGA_STRATIX10_SOCDK
 	default "vining_fpga" if TARGET_SOCFPGA_SAMTEC_VINING_FPGA
+	default "mitysom-5cs" if TARGET_SOCFPGA_CL_MITYSOM_5CS
 
 config SYS_VENDOR
 	default "intel" if TARGET_SOCFPGA_AGILEX_SOCDK
@@ -205,6 +210,7 @@ config SYS_VENDOR
 	default "terasic" if TARGET_SOCFPGA_TERASIC_DE1_SOC
 	default "terasic" if TARGET_SOCFPGA_TERASIC_DE10_NANO
 	default "terasic" if TARGET_SOCFPGA_TERASIC_SOCKIT
+	default "cl" if TARGET_SOCFPGA_CL_MITYSOM_5CS
 
 config SYS_SOC
 	default "socfpga"
@@ -225,5 +231,6 @@ config SYS_CONFIG_NAME
 	default "socfpga_sr1500" if TARGET_SOCFPGA_SR1500
 	default "socfpga_stratix10_socdk" if TARGET_SOCFPGA_STRATIX10_SOCDK
 	default "socfpga_vining_fpga" if TARGET_SOCFPGA_SAMTEC_VINING_FPGA
+	default "socfpga_mitysom_5cs" if TARGET_SOCFPGA_CL_MITYSOM_5CS
 
 endif
