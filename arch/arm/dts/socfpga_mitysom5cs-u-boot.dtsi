@@ -80,6 +80,12 @@
 	bank-name = "portc";
 };
 
+&rtc0 {
+	/* U-Boot's driver is less inclusive than Linux's, so we have a stricter
+	 * compatible */
+	compatible = "abracon,ab1805";
+};
+
 &usb1 {
 	/* Our Linux device tree uses a custom compatible that's not implemented
 	 * in the U-Boot driver, so revert back to the compatible from
