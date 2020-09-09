@@ -137,4 +137,10 @@ config RTC_STM32
 	help
 	  Enable STM32 RTC driver. This driver supports the rtc that is present
 	  on some STM32 SoCs.
+
+config RTC_AB1805
+	bool "Enable AB1805 driver"
+	depends on DM_RTC
+	help
+	  Support for Abracon 1805 Real Time Clock device.
 endmenu

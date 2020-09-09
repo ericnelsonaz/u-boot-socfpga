@@ -6,6 +6,7 @@
 
 obj-$(CONFIG_$(SPL_TPL_)DM_RTC) += rtc-uclass.o
 
+obj-$(CONFIG_RTC_AB1805) += ab1805.o
 obj-$(CONFIG_RTC_AT91SAM9_RTT) += at91sam9_rtt.o
 obj-y += date.o
 obj-y += rtc-lib.o
